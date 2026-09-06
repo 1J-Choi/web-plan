@@ -6,6 +6,7 @@
 - [ ] Plan 모드로 계획을 세우고, 코드가 안 바뀌는 걸 확인했어요
 - [ ] Start Implementation → Agent 실행까지 진행했어요
 - [ ] 5개 섹션(nav/hero/services/about/contact)을 모두 만들었어요
+- [ ] 자유수정(색상/문구/레이아웃)을 Agent 채팅으로 진행했어요
 - [ ] 인라인 결과물과 비교해봤어요 (guide.md의 비교표 작성)
 - [ ] GitHub Pages(`gh-pages` 브랜치) 배포 링크가 정상 동작해요
 
