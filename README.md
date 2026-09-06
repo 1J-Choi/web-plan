@@ -2,7 +2,7 @@
 
 4주차 실습② — **보안회사 원페이지 웹사이트 (Plan 기반 제작)**
 
-방금 인라인으로 만든 것과 **동일한 요구사항**의 보안회사 웹사이트를, 이번엔 GitHub Copilot **Plan 모드**로 계획을 먼저 세운 뒤 **Implement plan**으로 Agent에게 실행을 넘겨 완성하는 실습입니다.
+방금 인라인으로 만든 것과 **동일한 요구사항**의 보안회사 웹사이트를, 이번엔 GitHub Copilot **Plan 모드**로 계획을 먼저 세운 뒤 **Start Implementation**으로 Agent에게 실행을 넘겨 완성하는 실습입니다.
 
 ## 시작하기
 
@@ -26,7 +26,7 @@ nav (앵커링크: Hero / Services / About / Contact)
 
 ```
 [Plan] 계획 세우기 (코드 변경 없음)
-    ↓ "Implement plan" 클릭
+    ↓ "Start Implementation" 클릭
 [Agent] 계획대로 파일 생성·수정 (실행)
 ```
 
