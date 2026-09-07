@@ -1,0 +1,97 @@
+:root{
+  /* High-contrast palette */
+  --bg:#000000;        /* page background */
+  --card:#0b0b0b;      /* card / panel background */
+  --muted:#cfcfcf;     /* secondary text (light gray) */
+  --accent:#ffd400;    /* vivid yellow accent for CTAs */
+  --accent-2:#00e5ff;  /* vivid cyan for links */
+  --text:#ffffff;      /* primary text (white) */
+  --vuln:#ff6b3d;      /* orange for vuln */
+  --pentest:#ff3b7f;   /* pink/magenta for pentest */
+  --consult:#7aff5a;   /* lime for consult */
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#071021 0%,var(--bg) 100%);color:var(--text);}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+.site-header{background:transparent;position:sticky;top:0;z-index:40}
+.nav-row{display:flex;align-items:center;gap:1rem;justify-content:space-between}
+.logo{font-weight:700;font-size:1.25rem;color:var(--text);text-decoration:none}
+.logo:visited{color:var(--text)}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.site-nav a{color:var(--text);text-decoration:none;padding:.5rem}
+
+.nav-toggle{display:none;background:transparent;border:0;color:var(--text);font-size:1.25rem}
+
+.hero{padding:6rem 0;text-align:center}
+.hero h1{font-size:2rem;margin:0 0 .5rem}
+.lead{color:var(--muted);margin-bottom:1rem}
+.btn{display:inline-block;padding:.7rem 1.1rem;border-radius:6px;text-decoration:none}
+.btn.primary{background:var(--accent);color:#000}
+
+.services h2,.about h2,.contact h2{margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+
+/* Carousel: show single card with arrows */
+.carousel{display:flex;align-items:center;gap:1rem;position:relative;margin-top:1rem}
+.carousel-track{overflow:hidden;flex:1}
+.cards-inner{display:flex;transition:transform .4s ease}
+.cards-inner .card{min-width:100%;max-width:680px;margin:0 auto}
+.carousel-btn{background:transparent;border:2px solid var(--text);color:var(--text);padding:.4rem .6rem;border-radius:6px;font-size:1.5rem;cursor:pointer}
+.carousel-btn:focus{outline:3px solid var(--accent);}
+
+/* Adjust card sizing and text for clarity */
+.card{padding:1.5rem;border-radius:10px}
+.card h3{font-size:1.25rem}
+.card p{font-size:.95rem}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.06));padding:1.25rem;border-radius:8px;box-shadow:0 6px 18px rgba(3,8,15,0.4);transition:transform .18s ease,box-shadow .18s ease,background .18s ease;border-left:4px solid transparent}
+.card h3{margin:0 0 .5rem}
+.card p{color:var(--muted);margin:0 0 1rem}
+.card .detail{color:var(--accent-2);text-decoration:none;font-weight:600}
+
+/* Per-card accent colors (high-contrast) */
+.card--vuln{border-left-color:var(--vuln)}
+.card--vuln .detail{color:var(--vuln)}
+.card--vuln h3{color:var(--vuln)}
+
+.card--pentest{border-left-color:var(--pentest)}
+.card--pentest .detail{color:var(--pentest)}
+.card--pentest h3{color:var(--pentest)}
+
+.card--consult{border-left-color:var(--consult)}
+.card--consult .detail{color:var(--consult)}
+.card--consult h3{color:var(--consult)}
+
+/* Hover effect for cards */
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(3,8,15,0.6);background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))}
+
+/* Hover glow using accent color */
+.card--vuln:hover{box-shadow:0 18px 40px rgba(255,107,61,0.12),0 6px 18px rgba(0,0,0,0.6)}
+.card--pentest:hover{box-shadow:0 18px 40px rgba(255,59,127,0.12),0 6px 18px rgba(0,0,0,0.6)}
+.card--consult:hover{box-shadow:0 18px 40px rgba(122,255,90,0.12),0 6px 18px rgba(0,0,0,0.6)}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center}
+.modal[aria-hidden="false"]{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.6)}
+.modal-panel{position:relative;background:var(--card);padding:1.25rem;border-radius:8px;max-width:720px;z-index:10;color:var(--text);box-shadow:0 10px 40px rgba(2,6,12,0.7)}
+.modal-close{position:absolute;right:.5rem;top:.5rem;background:transparent;border:0;color:var(--muted);font-size:1.1rem}
+
+.about,.contact{padding:3rem 0}
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .cards-inner .card{max-width:560px}
+}
+@media (max-width:700px){
+  .cards{grid-template-columns:1fr}
+  .site-nav{position:absolute;right:1rem;top:64px;background:rgba(5,10,15,0.8);backdrop-filter:blur(6px);border-radius:8px;padding:.5rem;display:none}
+  .site-nav.open{display:block}
+  .site-nav ul{flex-direction:column}
+  .nav-toggle{display:block}
+  .container{padding:1rem}
+  .hero{padding:4rem 0}
+  .carousel-btn{padding:.35rem .5rem;font-size:1.25rem}
+}

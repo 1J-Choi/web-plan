@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SecureBlack - 보안 전문 회사</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a href="index.html#hero" class="logo">SecureBlack</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <ul>
+          <li><a href="#hero">Hero</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1>침묵의 방패, SecureBlack</h1>
+        <p class="lead">심층 탐지 · 공격 시뮬레이션 · 전략적 보안 컨설팅</p>
+        <a class="btn primary" href="#contact">문의하기</a>
+      </div>
+    </section>
+
+    <section id="services" class="services container">
+      <h2>Services</h2>
+      <div class="carousel">
+        <button class="carousel-btn carousel-prev" aria-label="이전 서비스">‹</button>
+        <div class="carousel-track">
+          <div class="cards-inner">
+            <article class="card card--vuln">
+              <h3>취약점 진단</h3>
+              <p>인프라·앱 전반을 빠르게 스캔해 우선 순위화된 취약점을 도출합니다.</p>
+              <a href="vuln.html" class="detail">자세히 보기</a>
+            </article>
+
+            <article class="card card--pentest">
+              <h3>모의해킹</h3>
+              <p>공격 시나리오 기반의 침투 검증으로 방어선을 시험합니다.</p>
+              <a href="pentest.html" class="detail">자세히 보기</a>
+            </article>
+
+            <article class="card card--consult">
+              <h3>보안 컨설팅</h3>
+              <p>비즈니스 맞춤형 보안 전략과 실행 계획을 설계합니다.</p>
+              <a href="consult.html" class="detail">자세히 보기</a>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-next" aria-label="다음 서비스">›</button>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About</h2>
+      <p>SecureCorp는 업계 경험을 바탕으로 안전한 서비스 제공을 목표로 하는 전문 보안회사입니다. 고객 자산 보호를 최우선으로 합니다.</p>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>이메일: contact@secureblack.example</p>
+      <p>전화: +82 02-1234-5678</p>
+      <p>주소: 서울시 예시구 예시동 123-45</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 SecureCorp. All rights reserved.</div>
+  </footer>
+
+  <!-- Modal template -->
+  <!-- modal removed: details are on separate pages -->
+
+  <script src="script.js"></script>
+</body>
+</html>
